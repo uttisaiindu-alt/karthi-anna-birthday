@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Karthi Anna ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #100016, #230021, #080013);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 60px 20px;
+        }
+
+        h1, h2 {
+            color: #ff9bd2;
+            text-shadow: 0 0 15px #ff36a7;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 7vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(1.7rem, 5vw, 2.5rem);
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        /* Floating hearts */
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 22px;
+            animation: floatUp 8s linear forwards;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Welcome page */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: #ffd5eb;
+            max-width: 650px;
+            margin: 10px auto 20px;
+        }
+
+        .birthday-cake {
+            font-size: 90px;
+            margin: 20px 0;
+            animation: cakeGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes cakeGlow {
+            from {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px #ff65b5);
+            }
+
+            to {
+                transform: scale(1.08);
+                filter: drop-shadow(0 0 25px #ff65b5);
+            }
+        }
+
+        /* Buttons */
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff36a7, #ff75c3);
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            margin: 10px 5px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 18px rgba(255, 54, 167, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.06);
+        }
+
+        /* Photo gallery */
+
+        .photo-gallery {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .photo-card {
+            height: 340px;
+            overflow: hidden;
+            border: 1px solid #ff8fc7;
+            border-radius: 20px;
+            box-shadow: 0 0 18px rgba(255, 77, 166, 0.35);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.03);
+        }
+
+        .photo-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* Surprise letter */
+
+        .letter-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .letter-intro {
+            color: #ffd5eb;
+            margin-bottom: 20px;
+        }
+
+        .letter {
+            display: none;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid #ff8fc7;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 25px;
+            text-align: left;
+            box-shadow: 0 0 25px rgba(255, 54, 167, 0.25);
+            animation: fadeIn 1s ease;
+        }
+
+        .letter.show {
+            display: block;
+        }
+
+        .letter h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .letter p {
+            margin-bottom: 18px;
+            color: #ffe6f2;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 30px 15px;
+            color: #ffb8db;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 45px 15px;
+            }
+
+            .birthday-cake {
+                font-size: 70px;
+            }
+
+            .photo-card {
+                height: 300px;
+            }
+
+            .letter {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background music -->
+    <audio id="birthdayMusic" loop preload="auto">
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Welcome section -->
+    <section class="hero">
+
+        <h1>Happy Birthday, Karthi Anna! 🎂❤️</h1>
+
+        <div class="birthday-cake">🎂</div>
+
+        <p class="subtitle">
+            To my most special person, my wonderful brother,
+            and one of the biggest blessings in my life. 💖
+        </p>
+
+        <p class="subtitle">
+            Today is all about YOU, Anna! 🥹✨
+        </p>
+
+        <div>
+            <button class="button" id="musicButton" onclick="toggleMusic()">
+                🎵 Play Music
+            </button>
+
+            <a href="#memories" class="button">
+                📸 Our Memories
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Photo gallery: pictures only -->
+    <section class="photo-gallery" id="memories">
+
+        <h2>📸 Our Beautiful Memories ❤️</h2>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+                <img src="images/anna%201.jpeg" alt="Anna">
+            </div>
+
+            <div class="photo-card">
+                <img src="images/anna%202.jpeg" alt="Anna">
+            </div>
+
+            <div class="photo-card">
+                <img src="images/anna%203.jpeg" alt="Together">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Surprise letter -->
+    <section class="letter-container" id="letter-section">
+
+        <h2>💌 A Little Letter for You</h2>
+
+        <p class="letter-intro">
+            Anna, I have something special to tell you.
+            Open this little surprise when you are ready. 🥹
+        </p>
+
+        <button class="button" onclick="openLetter()">
+            💖 Open Your Surprise
+        </button>
+
+        <div class="letter" id="surpriseLetter">
+
+            <h2>Happy Birthday Anna ❤️</h2>
+
+            <p>
+                Happy Birthday anna
+            </p>
+
+            <p>
+                May all your dreams come true hope you get what you want
+                in your life and thank you for caring support and everything
+                and thank you for making us smile when we sad and giving
+                support and guidance when we are least stage and thank you
+                for making you better for us you will be there in any situation
+                and you gain our trust
+            </p>
+
+            <p>
+                may be some times we fight and we laugh and how you listen
+                our words is so good and thank you listening we don't have
+                so many pics or vedios together but we have created so many
+                memories those are so memorable to us
+            </p>
+
+            <p>
+                your are the person who don't have expections on others
+                so pure hearted and you help the people who don't value of
+                you and learn say no the people because sometimes it's hurts
+                you and thank you for being there for us
+            </p>
+
+            <p>
+                and once again happy birthday Anna ❤️✨
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Ending -->
+    <section>
+        <h2>🎉 Once Again, Happy Birthday Anna! 🎉</h2>
+
+        <p style="color: #ffd5eb; margin-top: 15px;">
+            You deserve all the love and happiness in the world. ❤️
+        </p>
+
+        <p style="font-size: 2rem; margin-top: 20px;">
+            ❤️ 🎂 🥳 💖 🎉
+        </p>
+    </section>
+
+    <footer>
+        Made with endless love for Karthi Anna ❤️
+    </footer>
+
+    <script>
+        // Music controls
+        const birthdayMusic = document.getElementById("birthdayMusic");
+        const musicButton = document.getElementById("musicButton");
+
+        async function toggleMusic() {
+            if (birthdayMusic.paused) {
+                try {
+                    await birthdayMusic.play();
+                    musicButton.textContent = "⏸️ Pause Music";
+                } catch (error) {
+                    alert("Please check that music/birthday.mp3 exists.");
+                }
+            } else {
+                birthdayMusic.pause();
+                musicButton.textContent = "🎵 Play Music";
+            }
+        }
+
+        // Open surprise letter
+        function openLetter() {
+            const letter = document.getElementById("surpriseLetter");
+
+            letter.classList.add("show");
+
+            letter.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+
+        // Floating hearts
+        const heartSymbols = ["❤️", "💕", "💖", "✨", "💗"];
+
+        function createHeart() {
+            const heart = document.createElement("div");
+
+            heart.className = "heart";
+            heart.textContent =
+                heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+            heart.style.fontSize = (14 + Math.random() * 18) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(createHeart, 700);
+    </script>
+
+</body>
+</html>
